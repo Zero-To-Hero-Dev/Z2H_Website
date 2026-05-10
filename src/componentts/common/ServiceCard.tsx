@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+// import { ChevronRight } from 'lucide-react';
 import { ServiceItem } from '../../data';
 
 interface ServiceCardProps {
@@ -15,9 +15,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       </div>
       <div className="p-6">
         <p className="text-gray-600 mb-4">{service.description}</p>
-        <button className="text-indigo-600 font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+        {/* <button className="text-indigo-600 font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
           Learn More <ChevronRight className="w-4 h-4" />
-        </button>
+        </button> */}
       </div>
     </div>
   );

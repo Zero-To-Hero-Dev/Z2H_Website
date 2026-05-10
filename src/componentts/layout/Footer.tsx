@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Globe, href: "https://www.Z2HDEV.com", color: "hover:text-blue-600" },
-    { icon: InstagramLogoIcon, href: "https://www.instagram.com/z2hdev", color: "hover:text-pink-600" },
+    { icon: InstagramLogoIcon, href: "https://www.instagram.com/z2h_dev_ltd", color: "hover:text-pink-600" },
     // { icon: FacebookLogoIcon, href: "https://www.facebook.com/z2hdev", color: "hover:text-blue-800" },
     { icon: TwitterLogoIcon, href: "https://www.twitter.com/z2hdev", color: "hover:text-blue-400" },
   ];
