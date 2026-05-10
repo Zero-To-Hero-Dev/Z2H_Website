@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, MessageCircle, Clock} from 'lucide-react';
 import SectionHeader from '../componentts/common/SectionHeader';
 // import Button from '../componentts/common/Button';
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-  message: string;
-}
+// interface FormData {
+//   name: string;
+//   email: string;
+//   phone: string;
+//   service: string;
+//   message: string;
+// }
 
 const Contact: React.FC = () => {
   // const [formData, setFormData] = useState<FormData>({
