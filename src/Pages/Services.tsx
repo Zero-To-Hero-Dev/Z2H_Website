@@ -1,7 +1,7 @@
 import React from 'react';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle} from 'lucide-react';
 import SectionHeader from '../componentts/common/SectionHeader';
-import Button from '../componentts/common/Button';
+// import Button from '../componentts/common/Button';
 import { services } from '../data';
 
 const Services: React.FC = () => {

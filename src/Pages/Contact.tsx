@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Clock} from 'lucide-react';
 import SectionHeader from '../componentts/common/SectionHeader';
-import Button from '../componentts/common/Button';
+// import Button from '../componentts/common/Button';
 
 interface FormData {
   name: string;
@@ -12,35 +12,35 @@ interface FormData {
 }
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState<FormData>({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   service: '',
+  //   message: ''
+  // });
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  // const [ setIsSubmitting] = useState(false);
+  // const [ setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-      setIsSubmitting(false);
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     console.log('Form submitted:', formData);
+  //     setSubmitStatus('success');
+  //     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+  //     setIsSubmitting(false);
       
-      setTimeout(() => setSubmitStatus('idle'), 3000);
-    }, 1000);
-  };
+  //     setTimeout(() => setSubmitStatus('idle'), 3000);
+  //   }, 1000);
+  // };
 
   const contactInfo = [
     { icon: Phone, title: "Phone", details: "+250 785 950 333", color: "from-blue-500 to-cyan-500" },

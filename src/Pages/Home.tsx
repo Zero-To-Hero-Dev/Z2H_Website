@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Zap, Phone, CheckCircle, ArrowRight, Code, Palette, Cpu } from 'lucide-react';
+import { Rocket, Zap, Phone, CheckCircle, ArrowRight } from 'lucide-react';
 import Button from '../componentts/common/Button';
 import SectionHeader from '../componentts/common/SectionHeader';
 import ServiceCard from '../componentts/common/ServiceCard';

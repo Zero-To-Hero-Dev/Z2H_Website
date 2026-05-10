@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Code } from 'lucide-react';
-import logo from '../../LOGO.png'; 
+import { Menu, X } from 'lucide-react';
+// import logo from '../../LOGO.png'; 
 import logo1 from '../../Artboard 8.svg';
 // Adjust the path to your logo image
 
