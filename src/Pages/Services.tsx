@@ -34,9 +34,9 @@ const Services: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="outline" className="mt-4">
+                  {/* <Button variant="outline" className="mt-4">
                     Learn More <ArrowRight className="w-4 h-4" />
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>

@@ -9,15 +9,36 @@ export interface ServiceItem {
   color: string;
 }
 
+export interface TrainingPhase {
+  phase: string;
+  duration: string;
+  focus: string[];
+  certificate: string;
+}
+
+export interface TrainingPricing {
+  weekdayProgram: string;
+  weekendProgram: string;
+}
+
 export interface TrainingItem {
   title: string;
   icon: ReactNode;
+
   ageGroup?: string;
   duration?: string;
   period?: string;
   fee?: string;
+
   includes?: string[];
   topics?: string[];
+
+  trainingFormat?: string[];
+  collaboration?: string[];
+
+  phases?: TrainingPhase[];
+  pricing?: TrainingPricing;
+
   color: string;
 }
 
@@ -41,29 +62,64 @@ export const services: ServiceItem[] = [
   {
     title: "Website Development",
     icon: <Globe className="w-8 h-8" />,
-    description: "We create modern, responsive, and user-friendly websites for businesses, schools, organizations, and individuals.",
-    features: ["Business Websites", "School Websites", "Portfolio Websites", "E-commerce Websites", "Website Redesign", "Website Maintenance"],
+    description:
+      "We create modern, responsive, and user-friendly websites for businesses, schools, organizations, and individuals.",
+    features: [
+      "Business Websites",
+      "School Websites",
+      "Portfolio Websites",
+      "E-commerce Websites",
+      "Website Redesign",
+      "Website Maintenance"
+    ],
     color: "from-blue-500 to-cyan-500"
   },
+
   {
     title: "Graphic Design",
     icon: <Palette className="w-8 h-8" />,
-    description: "We design creative and professional visual content to help brands stand out.",
-    features: ["Poster Design", "Flyer Design", "Logo Design", "Business Cards", "Social Media Designs", "Banners & Advertisements"],
+    description:
+      "We design creative and professional visual content to help brands stand out.",
+    features: [
+      "Poster Design",
+      "Flyer Design",
+      "Logo Design",
+      "Business Cards",
+      "Social Media Designs",
+      "Banners & Advertisements"
+    ],
     color: "from-pink-500 to-rose-500"
   },
+
   {
     title: "IT Training",
     icon: <Cpu className="w-8 h-8" />,
-    description: "Practical computer and digital skills training for beginners and learners who want real-world technology experience.",
-    features: ["Computer Basics", "Microsoft Office", "Internet & Email", "Troubleshooting", "Networking Basics", "Data Backup & Recovery"],
+    description:
+      "Practical computer and digital skills training for beginners and learners who want real-world technology experience.",
+    features: [
+      "Computer Basics",
+      "Microsoft Office",
+      "Internet & Email",
+      "Troubleshooting",
+      "Networking Basics",
+      "Data Backup & Recovery"
+    ],
     color: "from-green-500 to-emerald-500"
   },
+
   {
     title: "Robotics Training",
     icon: <Zap className="w-8 h-8" />,
-    description: "Interactive robotics and coding training for kids and beginners using hands-on projects and robotics kits.",
-    features: ["Basic Robotics", "Arduino Programming", "Electronics & Sensors", "Block-Based Coding", "Teamwork & Creativity", "Building Robotic Projects"],
+    description:
+      "Interactive robotics and coding training for kids and beginners using hands-on projects and robotics kits.",
+    features: [
+      "Basic Robotics",
+      "Arduino Programming",
+      "Electronics & Sensors",
+      "Block-Based Coding",
+      "Teamwork & Creativity",
+      "Building Robotic Projects"
+    ],
     color: "from-purple-500 to-indigo-500"
   }
 ];
@@ -72,72 +128,195 @@ export const trainings: TrainingItem[] = [
   {
     title: "Robotics Training Camp for Kids",
     icon: <Zap className="w-12 h-12" />,
-    ageGroup: "8–15 Years",
+    ageGroup: "(8–12 Years), (13–15 Years)",
     duration: "1 Month",
     period: "School Holidays",
-    fee: "60,000 RWF",
-    includes: ["Robotics Kits", "Practical Projects", "Coding Activities", "Certificate After Completion"],
+    fee: "70,000 RWF",
+
+    trainingFormat: [
+      "Students are grouped by age and learning level",
+      "Hands-on practical sessions with robotics kits",
+      "Interactive coding and electronics activities",
+      "Team projects and creative problem-solving exercises",
+      "Beginner-friendly environment with guided support"
+    ],
+
+    includes: [
+      "Robotics Kits",
+      "Practical Projects",
+      "BlockCoding Activities",
+      "Arduino Basics",
+      "Electronics & Sensors",
+      "Certificate After Completion"
+    ],
+
+    collaboration: [
+      "Schools interested in collaboration can contact Z2H DEV LTD and Training programs can be organized directly at the school upon to Partnership agreements."
+    ],
+
     color: "from-purple-600 to-indigo-600"
   },
+
   {
-    title: "Computer Skills Training",
+    title: "IoT Development & IoT Web Application Training",
+
     icon: <Cpu className="w-12 h-12" />,
-    topics: ["Computer Basics", "Microsoft Office", "Internet Skills", "Email Usage", "File Management"],
-    color: "from-green-600 to-emerald-600"
+
+    ageGroup: "(16 Years and Above)",
+
+    duration: "2 Months",
+
+    phases: [
+      {
+        phase: "Phase 1",
+        duration: "1 Month",
+        focus: [
+          "IoT Fundamentals, Arduino & ESP8266/ESP32, Sensors & Electronics, Device Communication, Basic Projects"
+        ],
+        certificate: "Certificate Provided After Completion"
+      },
+
+      {
+        phase: "Phase 2",
+        duration: "1 Month",
+        focus: [
+          "IoT Web Application Development, Database Integration, API Communication, Dashboard Development, Real-Time Monitoring Projects"
+        ],
+        certificate: "Certificate Provided After Completion"
+      }
+    ],
+
+    pricing: {
+      weekdayProgram: "40,000 RWF per study phase",
+      weekendProgram: "30,000 RWF per study phase"
+    },
+
+    trainingFormat: [
+      "Project-based practical learning",
+      "Real-world IoT application development",
+      "Hands-on electronics and coding sessions",
+      "Team collaboration and innovation activities"
+    ],
+
+    // includes: [
+    //   "Practical IoT Projects",
+    //   "Arduino & ESP Modules",
+    //   "Sensors & Components",
+    //   "Web Dashboard Development",
+    //   "Coding Activities",
+    //   "Certificates for Each Completed Phase"
+    // ],
+
+    color: "from-cyan-600 to-blue-600"
   },
+
   {
-    title: "Web Development Basics",
-    icon: <Globe className="w-12 h-12" />,
-    topics: ["HTML & CSS", "Website Structure", "Responsive Design", "Basic Hosting Concepts"],
-    color: "from-blue-600 to-cyan-600"
-  }
+  title: "IT & Computer Skills Training",
+
+  icon: <Cpu className="w-12 h-12" />,
+
+  ageGroup: "Teens & Adults",
+
+  duration: "Flexible Program",
+
+  period: "Weekdays & Weekends Available",
+
+  fee: "Affordable Pricing Available",
+
+  trainingFormat: [
+    "Hands-on practical learning",
+    "Beginner-friendly training environment",
+    "Real-world computer practice sessions",
+    "Step-by-step guided support",
+    "Individual and group learning activities"
+  ],
+
+  topics: [
+    "Computer Basics",
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Microsoft PowerPoint",
+    "Internet & Email Usage",
+    "File Management",
+    "Computer Troubleshooting",
+    "Data Backup & Recovery",
+    "Software Installation",
+    "Typing & Productivity Skills",
+    "Basic Networking",
+    "Printing & Scanning",
+    "Online Research Skills",
+    "Digital Communication Skills"
+  ],
+
+  includes: [
+    "Practical Exercises",
+    "Training Materials",
+    "Hands-on Computer Access",
+    "Real Practice Projects",
+    "Support From Trainers",
+    "Certificate After Completion"
+  ],
+
+  color: "from-green-600 to-emerald-600"
+}
 ];
 
 export const portfolioItems: PortfolioItem[] = [
-  { 
-    title: "E-Commerce Platform", 
-    category: "Website", 
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
-    description: "Modern e-commerce website with payment integration"
+  {
+    title: "E-Commerce Platform",
+    category: "Website",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
+    description:
+      "Modern e-commerce website with payment integration"
   },
-  { 
-    title: "School Website", 
-    category: "Website", 
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop",
-    description: "Responsive school website with management system"
+
+  {
+    title: "School Website",
+    category: "Website",
+    image:
+      "https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop",
+    description:
+      "Responsive school website with management system"
   },
-  { 
-    title: "Brand Identity Package", 
-    category: "Graphic Design", 
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    description: "Complete brand identity and logo design"
+
+  {
+    title: "Brand Identity Package",
+    category: "Graphic Design",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+    description:
+      "Complete brand identity and logo design"
   },
-  { 
-    title: "Robotics Car Project", 
-    category: "Robotics", 
-    image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop",
-    description: "Arduino-based robotic car with sensors"
-  },
-  { 
-    title: "Business Portfolio", 
-    category: "Website", 
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    description: "Professional portfolio for creative agency"
-  },
-  { 
-    title: "Event Posters", 
-    category: "Graphic Design", 
-    image: "https://images.unsplash.com/photo-1536240474400-3f5f1e286cdb?w=600&h=400&fit=crop",
-    description: "Eye-catching event promotional materials"
+
+  {
+    title: "Robotics Car Project",
+    category: "Robotics",
+    image:
+      "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop",
+    description:
+      "Arduino-based robotic car with sensors"
   }
 ];
 
 export const blogPosts: BlogPost[] = [
-  { id: 1, title: "Robotics Camp Registration Open", date: "March 15, 2026", excerpt: "Join our exciting robotics camp for kids aged 8-15. Limited spots available!", category: "Events" },
-  { id: 2, title: "Student Robotics Projects Showcase", date: "March 10, 2026", excerpt: "See amazing projects built by our students using Arduino and sensors.", category: "Showcase" },
-  { id: 3, title: "Tips for Learning Coding", date: "March 5, 2026", excerpt: "Essential tips for beginners starting their coding journey.", category: "Tips" },
-  { id: 4, title: "Benefits of Digital Skills", date: "February 28, 2026", excerpt: "How digital skills can transform your career and business opportunities.", category: "Insights" },
-  { id: 5, title: "New Website Design Trends", date: "February 20, 2026", excerpt: "Explore the latest trends in web design for 2026.", category: "Design" }
+  {
+    id: 1,
+    title: "Robotics Camp Registration Open",
+    date: "March 15, 2026",
+    excerpt:
+      "Join our exciting robotics camp for kids aged 8-15.",
+    category: "Events"
+  },
+
+  {
+    id: 2,
+    title: "Student Robotics Projects Showcase",
+    date: "March 10, 2026",
+    excerpt:
+      "See amazing projects built by our students.",
+    category: "Showcase"
+  }
 ];
 
 export const whyChooseUs = [
@@ -150,5 +329,10 @@ export const whyChooseUs = [
 ];
 
 export const values = [
-  "Innovation", "Creativity", "Professionalism", "Learning", "Quality Service", "Teamwork"
+  "Innovation",
+  "Creativity",
+  "Professionalism",
+  "Learning",
+  "Quality Service",
+  "Teamwork"
 ];

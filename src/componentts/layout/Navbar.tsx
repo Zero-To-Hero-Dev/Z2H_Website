@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Code } from 'lucide-react';
+import logo from '../../LOGO.png'; 
+import logo1 from '../../Artboard 8.svg';
+// Adjust the path to your logo image
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +14,8 @@ const Navbar: React.FC = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Training", path: "/training" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Blog", path: "/blog" },
+    // { name: "Portfolio", path: "/portfolio" },
+    // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
 
@@ -20,19 +23,22 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="container mx-auto px-1">
+        <div className="flex justify-between items-center py-1">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            {/* Logo placeholder - replace with your actual logo image */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <Code className="w-6 h-6 text-white" />
+          <Link to="/" className="flex items-center space-x-1 group rounded-xl px-[-10px]">
+            <div className="w-24 h-24 bg-white shadow-sm flextransition-transform group-hover:scale-105 py-[-4] rounded-lg">
+              <img
+                src={logo1}
+                alt="Z2H Logo"
+                className="w-27 h-27 object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Z2H DEV LTD
               </h1>
-              <p className="text-xs text-gray-500 hidden sm:block">BUILD • DESIGN • GROW</p>
+              <p className="text-xs text-gray-500 hidden sm:block">LEARN • BUILD • LAUNCH</p>
             </div>
           </Link>
 

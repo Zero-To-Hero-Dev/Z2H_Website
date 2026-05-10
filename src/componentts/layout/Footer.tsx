@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Camera, Briefcase, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
+import {InstagramLogoIcon, TwitterLogoIcon} from '@radix-ui/react-icons';
+
 
 const Footer: React.FC = () => {
   const quickLinks = [
-    { name: "Home", path: "/" },
+    // { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Training", path: "/training" },
-    { name: "Portfolio", path: "/portfolio" },
+    // { name: "Portfolio", path: "/portfolio" },
     { name: "Contact", path: "/contact" }
   ];
 
   const socialLinks = [
-    { icon: Globe, href: "#", color: "hover:text-blue-600" },
-    { icon: Camera, href: "#", color: "hover:text-pink-600" },
-    { icon: Briefcase, href: "#", color: "hover:text-blue-700" },
-    { icon: MessageCircle, href: "#", color: "hover:text-sky-500" }
+    { icon: Globe, href: "https://www.Z2HDEV.com", color: "hover:text-blue-600" },
+    { icon: InstagramLogoIcon, href: "https://www.instagram.com/z2hdev", color: "hover:text-pink-600" },
+    // { icon: FacebookLogoIcon, href: "https://www.facebook.com/z2hdev", color: "hover:text-blue-800" },
+    { icon: TwitterLogoIcon, href: "https://www.twitter.com/z2hdev", color: "hover:text-blue-400" },
   ];
 
   return (
@@ -26,12 +28,13 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 w-10 h-10 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z2H</span>
+              <div className=" w-10 h-10 rounded-lg flex items-center justify-center">
+                {/* <span className="text-white font-bold text-lg">Z2H</span> */}
+                <img src="../LOGO.png" alt="Z2H DEV LTD Logo" />
               </div>
               <h3 className="text-2xl font-bold">Z2H DEV LTD</h3>
             </div>
-            <p className="text-gray-400 mb-2 text-sm">BUILD • DESIGN • GROW</p>
+            <p className="text-gray-400 mb-2 text-sm">LEARN • BUILD • LAUNCH</p>
             <p className="text-gray-400 text-sm leading-relaxed">
               Empowering businesses, students, and future innovators through technology, creativity, and practical digital skills.
             </p>
@@ -67,11 +70,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone className="w-4 h-4 text-indigo-400" />
-                <span>+250 XXX XXX XXX</span>
+                <span>+250 785 950 333</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-indigo-400" />
-                <span>info@z2hdev.com</span>
+                <span>z2hsupport@gmail.com</span>
               </li>
             </ul>
           </div>
